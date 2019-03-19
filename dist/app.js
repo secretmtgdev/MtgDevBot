@@ -23,9 +23,9 @@ const adapter = new botbuilder_1.BotFrameworkAdapter({
     appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 const qnaMaker = new botbuilder_ai_1.QnAMaker({
-    knowledgeBaseId: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').kbId,
-    endpointKey: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').endpointKey,
-    host: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').hostname
+    knowledgeBaseId: botConfig.findServiceByNameOrId('magic-the-gathering-kb').kbId,
+    endpointKey: botConfig.findServiceByNameOrId('magic-the-gathering-kb').endpointKey,
+    host: botConfig.findServiceByNameOrId('magic-the-gathering-kb').hostname
 });
 const luis = new botbuilder_ai_1.LuisRecognizer({
     applicationId: '23693392-f7ab-43d2-999b-cfbb5ff0a362',

@@ -19,9 +19,9 @@ const adapter = new BotFrameworkAdapter({
 });
 
 const qnaMaker = new QnAMaker({
-    knowledgeBaseId: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).kbId,
-    endpointKey: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).endpointKey,
-    host: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).hostname
+    knowledgeBaseId: (<IQnAService>botConfig.findServiceByNameOrId('magic-the-gathering-kb')).kbId,
+    endpointKey: (<IQnAService>botConfig.findServiceByNameOrId('magic-the-gathering-kb')).endpointKey,
+    host: (<IQnAService>botConfig.findServiceByNameOrId('magic-the-gathering-kb')).hostname
 });
 
 const luis = new LuisRecognizer({

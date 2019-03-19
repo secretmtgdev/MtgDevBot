@@ -23,7 +23,10 @@ class MtgBot {
                 }
                 else {
                     console.log('Luis is now solving this issue');
-                    yield this._luis.recognize(context).then(res => context.sendActivity(`Top intent: ${botbuilder_ai_1.LuisRecognizer.topIntent(res)}`));
+                    yield this._luis.recognize(context).then(res => {
+                        const top = botbuilder_ai_1.LuisRecognizer.topIntent(res);
+                        context.sendActivity(`Top intent: ${botbuilder_ai_1.LuisRecognizer.topIntent(res)}`);
+                    });
                 }
             }
             else {

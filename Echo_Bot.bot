@@ -12,11 +12,11 @@
         },
         {
             "type": "qna",
-            "name": "Magic-the-gathering-kb",
-            "kbId": "90ec651c-0d84-4022-a110-a2f73a724821",
-            "subscriptionKey": "faf675c53747408a9aabadcfac5320b4",
-            "endpointKey": "5bb3c0fb-0474-40b6-8683-bd2b39a2bfde",
-            "hostname": "https://magic-the-gathering-kb.azurewebsites.net/qnamaker",
+            "name": "magic-the-gathering-kb",
+            "kbId": "d6a58709-703e-4206-bf9d-e6f3642fa2ed",
+            "subscriptionKey": "b5b4f8d498274e42abe18b543a829591",
+            "endpointKey": "c2f4e567-c651-49a3-854d-b54069261cd3",
+            "hostname": "https://my-magic-bot.azurewebsites.net/qnamaker",
             "id": "39"
         }, 
         {
