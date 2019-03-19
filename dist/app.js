@@ -27,7 +27,12 @@ const qnaMaker = new botbuilder_ai_1.QnAMaker({
     endpointKey: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').endpointKey,
     host: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').hostname
 });
-const echo = new bot_1.MtgBot(qnaMaker);
+const luis = new botbuilder_ai_1.LuisRecognizer({
+    applicationId: '23693392-f7ab-43d2-999b-cfbb5ff0a362',
+    endpointKey: '47d1f0fb19a94dfbb66b0b5dd6a3aa15',
+    endpoint: 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/23693392-f7ab-43d2-999b-cfbb5ff0a362?verbose=true&timezoneOffset=-360&subscription-key=47d1f0fb19a94dfbb66b0b5dd6a3aa15&q='
+});
+const echo = new bot_1.MtgBot(qnaMaker, luis);
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, (context) => __awaiter(this, void 0, void 0, function* () {
         yield echo.onTurn(context);

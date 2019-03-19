@@ -8,9 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const botbuilder_ai_1 = require("botbuilder-ai");
 class MtgBot {
-    constructor(qnaMaker) {
+    constructor(qnaMaker, luis) {
         this._qnaMaker = qnaMaker;
+        this._luis = luis;
     }
     onTurn(context) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -20,7 +22,8 @@ class MtgBot {
                     yield context.sendActivity(qnaResults[0].answer).catch(error => console.log(error));
                 }
                 else {
-                    yield context.sendActivity('Could not find an answer to the question');
+                    console.log('Luis is now solving this issue');
+                    yield this._luis.recognize(context).then(res => context.sendActivity(`Top intent: ${botbuilder_ai_1.LuisRecognizer.topIntent(res)}`));
                 }
             }
             else {

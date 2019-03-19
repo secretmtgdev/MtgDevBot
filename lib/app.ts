@@ -1,8 +1,8 @@
 import { BotFrameworkAdapter } from 'botbuilder';
 import * as restify from 'restify';
 import { MtgBot } from './bot';
-import { QnAMaker } from 'botbuilder-ai';
-import { IQnAService, BotConfiguration } from 'botframework-config';
+import { QnAMaker, LuisRecognizer } from 'botbuilder-ai';
+import { IQnAService, BotConfiguration, ILuisService } from 'botframework-config';
 
 const botConfig = BotConfiguration.loadSync('./Echo_Bot.bot', process.env.BOT_FILE_SECRET);
 
@@ -24,7 +24,13 @@ const qnaMaker = new QnAMaker({
     host: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).hostname
 });
 
-const echo: MtgBot = new MtgBot(qnaMaker);
+const luis = new LuisRecognizer({
+    applicationId:'23693392-f7ab-43d2-999b-cfbb5ff0a362',
+    endpointKey:'47d1f0fb19a94dfbb66b0b5dd6a3aa15',
+    endpoint:'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/23693392-f7ab-43d2-999b-cfbb5ff0a362?verbose=true&timezoneOffset=-360&subscription-key=47d1f0fb19a94dfbb66b0b5dd6a3aa15&q='
+});
+
+const echo: MtgBot = new MtgBot(qnaMaker, luis);
 
 // set up the url to listen on 
 server.post('/api/messages', (req, res) => {

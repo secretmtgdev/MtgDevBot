@@ -18,6 +18,14 @@
             "endpointKey": "5bb3c0fb-0474-40b6-8683-bd2b39a2bfde",
             "hostname": "https://magic-the-gathering-kb.azurewebsites.net/qnamaker",
             "id": "39"
+        }, 
+        {
+            "type": "luis",
+            "name": "Magic_Chat_Bot",
+            "appId": "23693392-f7ab-43d2-999b-cfbb5ff0a362",
+            "subscriptionKey": "cd6cf970f67a45d98204ddc845471443",
+            "endpoint": "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/23693392-f7ab-43d2-999b-cfbb5ff0a362?verbose=true&timezoneOffset=-360&subscription-key=47d1f0fb19a94dfbb66b0b5dd6a3aa15&q="
+     
         }
     ],
     "padlock": "",
