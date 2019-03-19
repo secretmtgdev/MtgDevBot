@@ -1,0 +1,21 @@
+user=Michael Wilson
+bot=Test bot 
+
+user: Best mono colored commander
+bot: [Herocard
+    title=Yisan, the Wanderer Bard 
+    subtitle=mono green cEDH
+    text=Yisan is an extremely resilient mono green combo lord
+    images=https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/91037_200w.jpg
+    buttons=Learn More
+]
+
+user: Who is the best mono red commander?
+bot: [Herocard
+    title=Daretti, Scap Savant
+    subtitle=mono red cEDH
+    text=Daretti is a powerful commander with a primary focus on stax and artifact reanimation
+    images=https://cdn.shopify.com/s/files/1/1601/3103/products/Resized_DarettiScrapSavant_2000x.jpg?v=1530131005
+    buttons=Learn More
+]
+

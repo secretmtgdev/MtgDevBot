@@ -1,0 +1,19 @@
+{
+  "name": "bots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/restify": "^7.2.8",
+    "botbuilder": "^4.3.2",
+    "chatdown": "1.0.5",
+    "restify": "^8.2.0",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {}
+}

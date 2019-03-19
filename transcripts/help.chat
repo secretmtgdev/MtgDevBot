@@ -1,0 +1,15 @@
+user=Michael Wilson
+bot=Test bot 
+
+user: help
+bot: [Suggestions=What is the best counterspell in magic | What is the best commander to abuse food chain with | What commander should I build next | When is the next night for edh]
+
+user: What is the best counterspell in magic
+bot: Obviously _Force of Will_
+
+user: What commander should I build next
+bot: Here are some options:
+* _Best mono colored commanders_
+* _Best two colored commanders_
+* _Best three colored commanders_ 
+ 

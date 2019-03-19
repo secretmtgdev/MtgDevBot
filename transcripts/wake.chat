@@ -1,0 +1,17 @@
+user=Michael Wilson
+bot=Test bot
+
+user: Hello
+bot: Top of the afternoon to ya!
+
+user: My name is Michael Wilson
+bot: Hey Michael, what's good in the hood?
+
+user: Nothing much 
+bot: Alright then... Well here are a few topics that you may find interesting:
+* Best counterspell in magic
+* Best food chain commander
+* Your next commander
+* Next edh night
+
+bot: Please only select one option, type 'help' and I'll see what I can do
