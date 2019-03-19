@@ -1,0 +1,15 @@
+{
+    "name": "mtg-chat-bot",
+    "services": [
+        {
+            "type": "endpoint",
+            "name": "mtg-chat-bot",
+            "endpoint": "http://localhost:3978/api/messages",
+            "appId": "",
+            "appPassword": "",
+            "id": "176"
+        }
+    ],
+    "padlock": "zc1klAilCsTme9iJHBez4Q==!B3vVyRwjbK/TF2RzcmkfpN36+VTNJQBVo3Tz3U3ha5SNv5ASNyFQhXR9SBl1EG0U",
+    "version": "2.0"
+}

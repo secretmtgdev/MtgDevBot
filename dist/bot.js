@@ -8,11 +8,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-class EchoBot {
+class MtgBot {
+    constructor(qnaMaker) {
+        this._qnaMaker = qnaMaker;
+    }
     onTurn(context) {
         return __awaiter(this, void 0, void 0, function* () {
             if (context.activity.type === 'message') {
-                yield context.sendActivity(`You said ${context.activity.text}`);
+                const qnaResults = yield this._qnaMaker.generateAnswer(context.activity.text);
+                if (qnaResults.length > 0) {
+                    yield context.sendActivity(qnaResults[0].answer).catch(error => console.log(error));
+                }
+                else {
+                    yield context.sendActivity('Could not find an answer to the question');
+                }
             }
             else {
                 yield context.sendActivity(`${context.activity.type} event detected`);
@@ -20,5 +29,5 @@ class EchoBot {
         });
     }
 }
-exports.EchoBot = EchoBot;
+exports.MtgBot = MtgBot;
 //# sourceMappingURL=bot.js.map

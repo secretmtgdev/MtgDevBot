@@ -1,6 +1,10 @@
 import { BotFrameworkAdapter } from 'botbuilder';
 import * as restify from 'restify';
-import { EchoBot } from './bot';
+import { MtgBot } from './bot';
+import { QnAMaker } from 'botbuilder-ai';
+import { IQnAService, BotConfiguration } from 'botframework-config';
+
+const botConfig = BotConfiguration.loadSync('./Echo_Bot.bot', process.env.BOT_FILE_SECRET);
 
 // set up the server
 let server = restify.createServer();
@@ -14,8 +18,13 @@ const adapter = new BotFrameworkAdapter({
     appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 
-const echo: EchoBot = new EchoBot();
+const qnaMaker = new QnAMaker({
+    knowledgeBaseId: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).kbId,
+    endpointKey: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).endpointKey,
+    host: (<IQnAService>botConfig.findServiceByNameOrId('Magic-the-gathering-kb')).hostname
+});
 
+const echo: MtgBot = new MtgBot(qnaMaker);
 
 // set up the url to listen on 
 server.post('/api/messages', (req, res) => {

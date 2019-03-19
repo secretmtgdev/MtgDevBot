@@ -1,0 +1,34 @@
+{
+  "urls": [],
+  "qnaList": [
+    {
+      "id": 0,
+      "answer": "* Commander, EDH night, top tier commanders",
+      "source": "custom editorial",
+      "questions": [
+        "What can it expect?"
+      ],
+      "metadata": []
+    },
+    {
+      "id": 0,
+      "answer": "General Tazri",
+      "source": "custom editorial",
+      "questions": [
+        "who is the top commander?"
+      ],
+      "metadata": []
+    },
+    {
+      "id": 0,
+      "answer": "At your local game store, see website for more details",
+      "source": "custom editorial",
+      "questions": [
+        "where do people play commander?"
+      ],
+      "metadata": []
+    }
+  ],
+  "files": [],
+  "name": "qna"
+}

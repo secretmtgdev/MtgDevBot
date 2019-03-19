@@ -9,6 +9,15 @@
             "endpoint": "http://localhost:3978/api/messages",
             "id": "91db25a0-49d9-11e9-8b47-8df35aa6d5da",
             "name": "http://localhost:3978/api/messages"
+        },
+        {
+            "type": "qna",
+            "name": "Magic-the-gathering-kb",
+            "kbId": "90ec651c-0d84-4022-a110-a2f73a724821",
+            "subscriptionKey": "faf675c53747408a9aabadcfac5320b4",
+            "endpointKey": "5bb3c0fb-0474-40b6-8683-bd2b39a2bfde",
+            "hostname": "https://magic-the-gathering-kb.azurewebsites.net/qnamaker",
+            "id": "39"
         }
     ],
     "padlock": "",

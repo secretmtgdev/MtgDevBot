@@ -1,0 +1,130 @@
+{
+  "intents": [
+    {
+      "name": "Commander"
+    },
+    {
+      "name": "Location"
+    },
+    {
+      "name": "Time"
+    }
+  ],
+  "entities": [
+    {
+      "name": "subject",
+      "roles": []
+    },
+    {
+      "name": "location",
+      "roles": []
+    },
+    {
+      "name": "person",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "regex_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "What are the best mono colored commanders",
+      "intent": "Commander",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "What stores offer edh on Saturdays",
+      "intent": "Commander",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 18,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "Where is mox located",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 9,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "Where is Card Kingdom located",
+      "intent": "Location",
+      "entities": [
+        {
+          "entity": "location",
+          "startPos": 9,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "When did Richard Garfield create magic",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "person",
+          "startPos": 9,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "When is commander",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 8,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "When is modern",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 8,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "When is legacy",
+      "intent": "Time",
+      "entities": [
+        {
+          "entity": "subject",
+          "startPos": 8,
+          "endPos": 13
+        }
+      ]
+    }
+  ],
+  "patterns": [],
+  "patternAnyEntities": [],
+  "prebuiltEntities": [],
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "mtg",
+  "desc": "",
+  "culture": "en-us"
+}

@@ -11,6 +11,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const botbuilder_1 = require("botbuilder");
 const restify = require("restify");
 const bot_1 = require("./bot");
+const botbuilder_ai_1 = require("botbuilder-ai");
+const botframework_config_1 = require("botframework-config");
+const botConfig = botframework_config_1.BotConfiguration.loadSync('./Echo_Bot.bot', process.env.BOT_FILE_SECRET);
 let server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, () => {
     console.log(`${server.name} listening on ${server.url}`);
@@ -19,7 +22,12 @@ const adapter = new botbuilder_1.BotFrameworkAdapter({
     appId: process.env.MICROSOFT_APP_ID,
     appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
-const echo = new bot_1.EchoBot();
+const qnaMaker = new botbuilder_ai_1.QnAMaker({
+    knowledgeBaseId: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').kbId,
+    endpointKey: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').endpointKey,
+    host: botConfig.findServiceByNameOrId('Magic-the-gathering-kb').hostname
+});
+const echo = new bot_1.MtgBot(qnaMaker);
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, (context) => __awaiter(this, void 0, void 0, function* () {
         yield echo.onTurn(context);
